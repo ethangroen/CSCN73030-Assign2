@@ -78,14 +78,21 @@ int main() {
     students = readStudentEmails("StudentData_Emails.txt", students);
 #endif
 
+    // Debug mode: Print additional information for debugging purposes
+#ifdef _DEBUG
+    std::cout << "\nDebug Mode: Displaying all student data..." << std::endl;
     // Print out the students and their emails if available
     for (const auto& student : students) {
-        std::cout << student.first_name << " " << student.last_name; // display names for debugging
+        std::cout << student.first_name << " " << student.last_name;
+
         if (!student.email.empty()) {
             std::cout << " - Email: " << student.email;
         }
         std::cout << std::endl;
-    }
+        }
+#else 
+    std::cout << "Release Mode: No data displayed" << std::endl;
+#endif
 
     return 1;
 }
