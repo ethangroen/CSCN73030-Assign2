@@ -38,7 +38,7 @@ int main() {
 
     // Display loaded students for verification
     for (const auto& student : students) {
-        std::cout << student.first_name << " " << student.last_name << std::endl;
+        std::cout << student.first_name << " " << student.last_name << std::endl;     // display names for debugging
     }
 
     return 1;
