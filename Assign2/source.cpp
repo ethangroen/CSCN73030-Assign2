@@ -80,7 +80,7 @@ int main() {
 
     // Print out the students and their emails if available
     for (const auto& student : students) {
-        std::cout << student.first_name << " " << student.last_name; // display names for debugging
+        std::cout << student.first_name << " " << student.last_name << std::endl; // display names for debugging
         if (!student.email.empty()) {
             std::cout << " - Email: " << student.email;
         }
